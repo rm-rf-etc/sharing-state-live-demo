@@ -1,8 +1,7 @@
 import React from 'react';
 import { ChromePicker } from 'react-color';
 
-export default () => {
-	const [{r,g,b}, setColor] = React.useState({ r:0, g:0, b:0 });
+export default ({ color: {r,g,b}, setColor }) => {
 	return (
 		<div className="col3">
 			<ChromePicker

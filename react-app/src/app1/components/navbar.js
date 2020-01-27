@@ -1,11 +1,7 @@
 import React from 'react';
 import { rgb2hex } from '../../helpers';
 
-let r = 0;
-let g = 0;
-let b = 0;
-
-export default () => {
+export default ({ color: {r,g,b} }) => {
 	return (
 		<div
 			className="col col1 text-mix-blend"

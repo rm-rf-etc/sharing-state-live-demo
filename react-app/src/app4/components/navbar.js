@@ -1,11 +1,10 @@
 import React from 'react';
 import { rgb2hex } from '../../helpers';
-
-let r = 0;
-let g = 0;
-let b = 0;
+import useSharedState from 'use-simple-shared-state';
+import store from '../state';
 
 export default () => {
+	const [{r,g,b}] = useSharedState(store, [s => s.color]);
 	return (
 		<div
 			className="col col1 text-mix-blend"

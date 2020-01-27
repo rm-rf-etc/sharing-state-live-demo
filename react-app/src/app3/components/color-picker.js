@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { ChromePicker } from 'react-color';
+import { context } from '../context';
 
 export default () => {
-	const [{r,g,b}, setColor] = React.useState({ r:0, g:0, b:0 });
+	const { color, setColor } = useContext(context);
 	return (
 		<div className="col3">
 			<ChromePicker
-				color={{r,g,b}}
-				onChange={({ rgb: {r,g,b} }) => setColor({r,g,b})}
+				color={color}
+				onChange={({ rgb: {r,g,b} }) => setColor({ color: {r,g,b} })}
 			/>
 		</div>
 	);

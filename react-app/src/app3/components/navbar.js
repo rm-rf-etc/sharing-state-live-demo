@@ -1,11 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { rgb2hex } from '../../helpers';
-
-let r = 0;
-let g = 0;
-let b = 0;
+import { context } from '../context';
 
 export default () => {
+	const { color: {r,g,b} } = useContext(context);
 	return (
 		<div
 			className="col col1 text-mix-blend"
